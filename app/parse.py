@@ -32,7 +32,7 @@ def initialize_driver() -> None:
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--window-size=1920,1080")
     service = Service()
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    globals()['driver'] = webdriver.Chrome(service=service, options=chrome_options)
 
 @dataclass
 class Product:
